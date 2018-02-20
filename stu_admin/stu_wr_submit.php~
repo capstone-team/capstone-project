@@ -1,0 +1,185 @@
+<?PHP
+$handle = fopen("header.txt","r");
+$header = fread($handle,filesize("header.txt"));
+fclose($handle);
+echo $header;
+mysql_connect("localhost","","");
+mysql_select_db("lhucc_webdb");
+
+if ((strlen($req_uname) > 0) && (strlen($req_name) > 0) && (strlen($ph_num) > 0) &&
+	(strlen($descrip) > 0) && (strlen($title) > 0) && (strlen($building) >0)) {
+	$fields = "add_date,status,req_uname,req_name,ph_num,descrip,title,wr_type,equip_type";
+	$values = "NOW(),'Submitted','$req_uname','$req_name','$ph_num','$descrip','$title','$wr_type','$equip_type'";
+	if (strlen($building) > 0) {
+		$fields .= ",building";
+		$values .= ",'$building'";
+		}
+	if (strlen($room_no) > 0) {
+		$fields .= ",room_no";
+		$values .= ",'$room_no'";
+		}
+	if (strlen($lhu_stu_id) > 0) {
+		$fields .= ",lhu_stu_id";
+		$values .= ",$lhu_stu_id";
+		}
+	if (strlen($mfg) > 0) {
+		$fields .= ",mfg";
+		$values .= ",$mfg";
+		}
+	if (strlen($model) > 0) {
+		$fields .= ",model";
+		$values .= ",$model";
+		}
+	if (strlen($serial) > 0) {
+		$fields .= ",serial";
+		$values .= ",$serial";
+		}
+	if (mysql_query("INSERT INTO stu_wr ($fields) VALUES ($values)")){
+	echo "
+		Your work request has been submitted.  Thank you.
+		";
+		}
+        else {
+	echo "
+	        An error has occurred. <BR>
+		" . mysql_error();
+		}
+	
+	$msg_txt = 
+"A work request has been submitted via the web.  Please review it at 
+http://www.lhup.edu/computing_and_tech/stu_admin/stu_wr_queue.php";
+
+	mail("lhulabs@lhup.edu","Work Request Submitted via web",$msg_txt);
+	}
+else if ((strlen($req_uname) > 0) || (strlen($req_name) > 0) || (strlen($ph_num) > 0) ||
+	(strlen($descrip) > 0) || (strlen($title) > 0) || (strlen($building) >0)) {
+	echo "Not all required fields were filled out.  Please press the Back button to correct this.";
+	}
+else {
+	echo "
+		<H2>Submit a Work Request</H2>
+		<P>Student computer work requests can be submitted on this page.  When
+		using the form below, please be sure to complete all fields and provide as much information 
+		as possible.  Your request will be addressed in the order it was received.</P>
+
+		<P>Residence Technical Assistants will assist you with software related support ONLY.  No
+		hardware repair or parts exchange will be done except for Dell Laptop Purchase Program machines.  
+		They will also assist in determining if a network jack problem exists and will notify the 
+		Computing Center.</P>
+		
+		<P>Off campus students and those who need Dell Laptop Purchase Program hardware repairs will
+		need to bring their equipment to 506 Robinson Hall for service.</P>
+
+		<FORM ACTION=\"$PHP_SELF\" METHOD=\"POST\">
+		<TABLE BORDER=0>
+		<TR>
+		<TD>*Requestor username:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"req_uname\" SIZE=\"8\" MAXLENGTH=\"8\">@lhup.edu</TD>
+		</TR>
+		<TR>
+		<TD>*Requestor Name (Last, First):</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"req_name\" SIZE=\"40\" MAXLENGTH=\"40\"></TD>
+		</TR>
+		<TR>
+		<TD>*Building Abbrev:</TD>
+		<TD><SELECT NAME=\"building\">
+		       <OPTION VALUE=GROS>GROS</OPTION>
+		       <OPTION VALUE=HIGH>HIGH</OPTION>
+		       <OPTION VALUE=MCEN>MCEN</OPTION>
+		       <OPTION VALUE=NORT>NORT</OPTION>
+		       <OPTION VALUE=RUSS>RUSS</OPTION>
+		       <OPTION VALUE=SMIT>SMIT</OPTION>
+		       <OPTION VALUE=VILL>VILL</OPTION>
+		       <OPTION VALUE=WOOL>WOOL</OPTION>
+		       <OPTION VALUE=OFFC>Off Campus</OPTION>
+		    </SELECT></TD>
+		</TR>
+		<TR>
+		<TD>Room No:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"room_no\" SIZE=\"4\" MAXLENGTH=\"4\"></TD>
+		</TR>
+		<TR>
+		<TD>*Phone Number:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"ph_num\" SIZE=\"12\" MAXLENGTH=\"12\"></TD>
+		</TR>
+		<TR>
+		<TD>LHU Student ID:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"lhu_stu_id\" SIZE=\"6\" MAXLENGTH=\"6\"></TD>
+		</TR>
+		<TR>
+		<TD>*Work Request Title:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"title\" SIZE=\"50\" MAXLENGTH=\"100\"></TD>
+		</TR>
+		<TR>
+		<TD>*Request Description:</TD>
+		<TD><TEXTAREA NAME=\"descrip\" COLS=\"50\" ROWS=\"8\"></TEXTAREA>
+		    <BR><I>Anyone dropping off equipment in Robinson 506 should include machine
+		        type, serial number, and any boot password (not your lhup.edu password).</I></TD>
+		</TR>
+		<TR>
+		<TD>*Request Type:</TD>
+		<TD><SELECT NAME=\"wr_type\">
+		        <OPTION VALUE=\"Software\">Software</OPTION>
+		        <OPTION VALUE=\"Network\">Network</OPTION>
+		        <OPTION VALUE=\"CCA\">CCA</OPTION>
+			<OPTION VALUE=\"Hardware\">Hardware (Dell Laptop Purchase Program Only)</OPTION>
+		    </SELECT></TD>
+		</TR>
+		<TR>
+		<TD>*Equip. Type:</TD>
+		<TD><SELECT NAME=\"equip_type\">
+		        <OPTION VALUE=\"Laptop\">Laptop</OPTION>
+		        <OPTION VALUE=\"Desktop\">Desktop/Tower</OPTION>
+		        <OPTION VALUE=\"Printer\">Printer</OPTION>
+		        <OPTION VALUE=\"Other\">Other</OPTION>
+		    </SELECT></TD>
+		</TR>
+		<TR>
+		<TD>Manufacturer:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"mfg\" SIZE=\"20\" MAXLENGTH=\"20\"></TD>
+		</TR>
+		<TR>
+		<TD>Model No.:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"model\" SIZE=\"25\" MAXLENGTH=\"25\"></TD>
+		</TR>
+		<TR>
+		<TD>Serial No.:</TD>
+		<TD><INPUT TYPE=\"TEXT\" NAME=\"serial\" SIZE=\"50\" MAXLENGTH=\"50\"></TD>
+		</TR>
+		</TABLE>
+		<B>Fields Marked with an Asterick (*) are required.  If you do not complete these
+		you will be redirected back to this page</B><BR><BR>
+		<INPUT TYPE=\"SUBMIT\" VALUE=\"Submit My Request\">
+		</FORM>
+		<P>
+		<FORM action=\"stu_wr_queue.php\" method=\"POST\">
+		<INPUT TYPE=\"SUBMIT\" VALUE=\"View Work Request Queue\">
+		</FORM>
+		";
+	}
+?>
+	</td>
+  </tr>
+</table>
+<br>
+<table width="780" border="0">
+  <tr>
+    <td>
+      <div align="center"> 
+        <p><img src="bottom.gif" width="640" height="56"><br>
+          <font size="1" face="ARIAL,HELVETICA"><b> <a href="http://www.lhup.edu/index.html"><font color="#EBEBEB">HOME</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/admissions/index.html"><font color="#EBEBEB">ADMISSIONS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/academic/index.html"><font color="#EBEBEB">STUDENTS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/alumni/index.html"><font color="#EBEBEB">ALUMNI</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/sports/index.htm"><font color="#EBEBEB">SPORTS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/events/index.htm"><font color="#EBEBEB">EVENTS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/site_index.htm"><font color="#EBEBEB">SITE 
+          INDEX</font></a><br>
+          Copyright 2002 Lock Haven University of PA - Site Design by Boise P. 
+          Miller - LHUP Graphics by Scott Eldredge</b></font>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
