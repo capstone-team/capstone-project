@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="nav.css">
+<script language="JavaScript" type="text/javascript" src="nav.js"></script>
+<title>LHUP Computing and Instructional Technology Center</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+<body onLoad="init();">
+
+<body bgcolor="#990030" text="#FFFFFF" link="#F5F5F5" vlink="#DCDCDC">
+<table width="780" border="0">
+  <tr>
+    <td width="300"><img src="lhucc.gif" width="300" height="92"></td>
+    <td width="480" align="center">
+       <font face="Arial, Helvetica, sans-serif"><b>ADMINISTRATIVE MENU</b></font>
+
+<div id="menuTop">
+
+<table border="1" cellpadding="10" width="480" cellspacing="0">
+  <tr> 
+    <td width=50% align=center><a href="#" onMouseOver="hideAll(); showLayer('layer1'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>Work Requests</b></a></td>
+    <td width=50% align=center><a href="#" onMouseOver="hideAll(); showLayer('layer2'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>Links</b></a></td>
+  </tr>
+</table>
+
+</div>
+
+<div id="layer1">
+  <a href="stu_wr_submit.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Addition</a><br>
+  <a href="stu_wr_queue.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Queue</a><br>
+  <a href="stu_wr_full_list.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Full List</a><br>
+</div>
+
+<div id="layer2">
+  <a href="index.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Student Admin Home</a><br>
+  <a href="/admin/index.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">F/S Admin Home</a><br>
+</div>
+
+
+    </td>
+  </tr>
+</table>
+<br>
+<table width="780" border="0">
+  <tr>
+    <td>

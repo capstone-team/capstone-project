@@ -1,0 +1,39 @@
+#menuTop {
+   font-family: Arial, Helvetica, sans-serif;
+   }
+
+#layer1 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   background-color : #FFFFFF; 
+   layer-background-color : #FFFFFF;
+   border-width : 1px; 
+   border-style : solid; 
+   border-color : #990030;
+   width : 237px; 
+   top : 87px; 
+   left : 315px; 
+   position : absolute; 
+   z-index : 90; 
+   visibility : hidden; 
+}
+
+
+#layer2 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   background-color : #FFFFFF; 
+   layer-background-color : #FFFFFF;
+   border-width : 1px; 
+   border-style : solid; 
+   border-color : #990030;
+   width : 237px; 
+   top : 87px; 
+   left : 554px; 
+   position : absolute; 
+   z-index : 90; 
+   visibility : hidden;  
+}
+
+
+
