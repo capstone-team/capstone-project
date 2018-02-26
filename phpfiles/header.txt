@@ -1,0 +1,69 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="nav.css">
+<script language="JavaScript" type="text/javascript" src="nav.js"></script>
+<title>LHUP Computing and Instructional Technology Center</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+<body onLoad="init();">
+
+<body bgcolor="#990030" text="#FFFFFF" link="#F5F5F5" vlink="#DCDCDC">
+<table width="780" border="0">
+  <tr>
+    <td width="300"><img src="lhucc.gif" width="300" height="92"></td>
+    <td width="480" align="center">
+       <font face="Arial, Helvetica, sans-serif"><b>ADMINISTRATIVE MENU</b></font>
+
+<div id="menuTop">
+
+<table border="1" cellpadding="10" width="480" cellspacing="0">
+  <tr> 
+    <td><a href="#" onMouseOver="hideAll(); showLayer('layer1'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>Tools</b></a></td>
+    <td><a href="#" onMouseOver="hideAll(); showLayer('layer2'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>Work Requests</b></a></td>
+    <td><a href="#" onMouseOver="hideAll(); showLayer('layer3'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>FAQ's</b></a></td>
+    <td><a href="#" onMouseOver="hideAll(); showLayer('layer4'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>Loaner Equipment</b></a></td>
+    <td><a href="#" onMouseOver="hideAll(); showLayer('layer5'); stopTime()" onMouseOut="startTime();"><font size="-1"><b>Links</b></a></td>
+  </tr>
+</table>
+
+</div>
+
+<div id="layer1">
+  <a href="statusupdate.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Update News/Advisories</a><br>
+  <a href="sendmessage.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Send Message To Phone</a><br>
+</div>
+
+<div id="layer2">
+  <a href="wr_approve.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Approval</a><br>
+  <a href="wr_addition.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Addition</a><br>
+  <a href="wr_queue.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Queue</a><br>
+  <a href="wr_closeout.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Closeout</a><br>
+  <a href="wr_full_list.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">WR Full List</a><br>
+</div>
+
+<div id="layer3">
+  <a href="faq_add.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Add FAQ</a><br>
+  <a href="faqdb.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Manage FAQ's</a><br>
+</div>
+
+<div id="layer4">
+  <a href="loan_addition.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Add Loan</a><br>
+  <a href="loan_list.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Manage Loans</a><br>
+</div>
+
+<div id="layer5">
+  <a href="index.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">Admin Home</a><br>
+  <a href="/computing_and_tech/index.php" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">CIT Home</a><br>
+  <a href="/" onMouseOver="stopTime();" onMouseOut="startTime();"><font size="-1" color="#990030">LHUP Home</a><br>
+</div>
+
+
+    </td>
+  </tr>
+</table>
+<br>
+<table width="780" border="0">
+  <tr>
+    <td>

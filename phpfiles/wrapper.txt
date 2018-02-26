@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Level 2.0
+Version    : 1.0
+Released   : 20070821
+Description: A Web 2.0 design with fluid width suitable for blogs and small websites.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Lock Haven University IT Department</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="index.php">IT Administration</a></h1>
+		<p><a href="index.php">at Lock Haven University</a></p>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.php">F/S Admin</a></li>
+			<li><a href="../stu_admin/index.php">Student Admin</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Work Requests</h2>
+				<ul>
+					<li><a href="wr_addition.php">Add A Request</a></li>
+					<li><a href="wr_queue.php">Request Queue</a></li>
+					<li><a href="wr_closeout.php">Request Closeout</a></li>
+					<li><a href="wr_full_list.php">Show All</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>FAQ's</h2>
+				<ul>
+					<li><a href="faq_add.php">Add an FAQ</a></li>
+					<li><a href="faqdb.php">Manage FAQs</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Loaner Equipment</h2>
+				<ul>
+					<li><a href="loan_addition.php">Add a Loan Record</a></li>
+					<li><a href="loan_list.php">Manage Loans</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Tools</h2>
+				<ul>
+					<li><a href="statusupdate.php">Status Updates</a></li>
+					<li><a href="sendmessage.php">Send Phone Message</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<!-- start content -->
+	<div id="content">
+CONTENTPLACEHOLDER
+	</div>
+	<!-- end content -->
+	<br style="clear: both;" />
+</div>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+        <center>
+	<table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="640" id="table1">
+		<tr>
+			<td><map name="FPMap0_I1">
+			<area href="http://www.lhup.edu" shape="rect" coords="277, 34, 342, 48">
+			<area href="mailto:seldredg@lhup.edu" shape="rect" coords="355, 33, 450, 48">
+			<area href="http://www.lhup.edu/calendar" shape="rect" coords="177, 34, 267, 48">
+			<area href="http://www.lhup.edu/site_index.htm" shape="rect" coords="91, 34, 169, 48">
+			</map>
+			<img border="0" src="http://www.lhup.edu/faculty_staff/_borders/top04.gif" usemap="#FPMap0_I1" width="640" height="49"></td>
+
+		</tr>
+	</table>
+        </center>
+</div>
+<!-- end footer -->
+</body>
+</html>

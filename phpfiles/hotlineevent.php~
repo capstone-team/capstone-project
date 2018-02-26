@@ -1,0 +1,80 @@
+<?PHP
+$handle = fopen("header.txt","r");
+$header = fread($handle,filesize("header.txt"));
+fclose($handle);
+echo $header;
+mysql_connect("localhost","","");
+mysql_select_db("lhucc_webdb");
+$ipaddress = getenv("REMOTE_ADDR");
+list($domain, $username) = split('\\\\',getenv("AUTH_USER"));
+//echo "$username $ipaddress";
+if ($action == "Submit") {
+   $query = "INSERT INTO hotlineevents(username,ipaddress,event_timestamp,event_type,comments)
+               VALUES ('$username','$ipaddress',NOW(),'$event_type','$comments')";
+   $result = mysql_query($query) or die("Invalid query: " . mysql_error());
+   if ($result != 0) {
+        echo "Error: $result";
+	}
+   else {
+        echo "Log entry recorded";
+	}
+   }
+echo <<<END
+<h3>Hotline Event Logging</h3>
+<form action="$PHP_SELF" method="POST">
+<table border=1>
+  <tr>
+    <td>Username:</td>
+    <td>$username</td>
+  </tr>
+  <tr>
+    <td>IP Address:</td>
+    <td>$ipaddress</td>
+  </tr>
+  <tr>
+    <td>Event Type:</td>
+    <td><select name="event_type">
+           <option value="Phone">Telephone Call</option>
+	   <option value="Window">Window Visit</option>
+	   <option value="Checkin">Hourly Check-In</option>
+	   <option value="Arrival">Worker Arrival</option>
+	   <option value="Depart">Worker Departure</option>
+	 </select></td>
+  </tr>
+  <tr>
+    <td>Comments:</td>
+    <td><textarea rows="6" cols="50"></textarea></td>
+  </tr>
+</table>
+<input type="submit" name="action" value="Submit">
+<input type="reset" name="reset" value="Reset Form">
+</form>
+
+END;
+
+?>
+	</td>
+  </tr>
+</table>
+<br>
+<table width="780" border="0">
+  <tr>
+    <td>
+      <div align="center"> 
+        <p><img src="bottom.gif" width="640" height="56"><br>
+          <font size="1" face="ARIAL,HELVETICA"><b> <a href="http://www.lhup.edu/index.html"><font color="#EBEBEB">HOME</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/admissions/index.html"><font color="#EBEBEB">ADMISSIONS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/academic/index.html"><font color="#EBEBEB">STUDENTS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/alumni/index.html"><font color="#EBEBEB">ALUMNI</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/sports/index.htm"><font color="#EBEBEB">SPORTS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/events/index.htm"><font color="#EBEBEB">EVENTS</font></a><font color="#EBEBEB">&nbsp; 
+          |&nbsp;</font><a href="http://www.lhup.edu/site_index.htm"><font color="#EBEBEB">SITE 
+          INDEX</font></a><br>
+          Copyright 2002 Lock Haven University of PA - Site Design by Boise P. 
+          Miller - LHUP Graphics by Scott Eldredge</b></font>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

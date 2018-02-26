@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>LHUP Computing Center</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+</head>
+
+<body bgcolor="#990030" text="#FFFFFF" link="#F5F5F5" vlink="#DCDCDC">
+<table width="780" border="0">
+  <tr>
+    <td width="300"><img src="lhucc.gif" width="300" height="92"></td>
+    <td width="480" align="center"><font face="Arial, Helvetica, sans-serif"><b>ADMINISTRATIVE 
+      MENU</b></font><br>
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="adminhomebtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="adminhomebtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="statusupdbtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="statusupdbtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="leavecalbtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="leavecalbtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="cchomebtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="cchomebtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="wrapprovebtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="wrapprovebtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="wradditionbtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="wradditionbtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="wrqueuebtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="wrqueuebtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="wrclosebtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="wrclosebtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="wr_full_list.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="wr_full_list.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="faq_addbtn.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="faq_addbtn.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="100" height="20">
+        <param name=movie value="faqdb_button.swf">
+        <param name=quality value=high>
+        <param name="BASE" value=".">
+        <param name="BGCOLOR" value="#990033">
+        <embed src="faqdb_button.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100" height="20" bgcolor="#990033">
+        </embed> 
+      </object></td>
+  </tr>
+</table>
+<br>
+<table width="780" border="0">
+  <tr>
+    <td>
